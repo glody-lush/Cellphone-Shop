@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!--CSS file-->
+    <link rel="stylesheet" href="MyStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--bootstrap file-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--jQuery file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+    <!--javascript file-->
+    <script src="task.js"></script>
+
+</head>
+
+<body>
+    <div class="ShopDiv">
+        <nav style="margin-left: 65%;">
+            <ul class="mainClassUl">
+                <li class="mainli"><a style="color: black; font-size: 18px; font-weight: bold;" class="active Maina"" href="index.html">Home</a></li>
+                <li class="mainli"><a style="color: black; font-size: 18px; font-weight: bold;" class="active Maina"" href="shop.html">SHOP</a></li>
+                <li class="mainli"> <a class="cart Maina" href="AddCart.html"><i class="fa fa-shopping-bag"
+                            style="font-size:48px;color:red"></i> Cart <span>0</span> </a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="row g-5 container-fluid">
+        <div class="col">
+            <div class="mt-5 shadow-sm rounded">
+                <form>
+                    <label>Discount Code</label>
+                    <input type="text" placeholder="Discount code" oninput="Discount()" /> <br />
+                    <input class="btn btn-outline-dark" type="button" value="Apply Discount Code" onclick="Discount()" />
+                </form>
+            </div>
+
+            <div class="shadow-sm">
+                <form onchange="CheckPayementMethod()">
+                    <label>Collection</label>
+                    <input class="collectionClicked" id="collection" type="radio" name="delivery" checked="checked">
+                    <label>Delivery</label>
+                    <input id="delivery" type="radio" name="delivery" checked="checked" >
+                </form>
+            </div>
+            <div id="deliveryOption" class="shadow-sm">
+                <form onchange="MethodDelivery()">
+                    <label>Express</label>
+                    <input class="expressCliked" id="express" type="radio" name="delivery">
+                    <label>Standard</label>
+                    <input class="standardCliked" id="standard" type="radio" name="delivery">
+                </form>
+            </div>
+            
+            <div class="shadow-sm ">
+                <h5 id="discShow">Discount: -R0</h4>
+                <h5 id="delivShow"></h5>
+                <h5 id="vat"></h5>
+                <h4 id="Total_Vat_Disc"></h4>
+            </div>
+            <button onclick="ConfirmOrder()"  id="ConfirmOrder" type="button" class="btn btn-danger">Confirm Order</button>
+        </div>
+
+        <div class="col">
+            <div class="products-container">
+                <div class="product-hearder">
+                    <h5 class="product-title">PRODUCT</h5>
+                    <h5 class="price">PRICE</h5>
+                    <h5 class="quantity">QUANTITY</h5>
+                    <h5 class="total">TOTAL</h5>
+                </div>
+                <!--This is where we will put all our product that is in the localStorage and we will populate it by javaScript-->
+                <div class="products">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid shipping row ">
+            <table class="table table-hover shadow bg-white rounded">
+                <thead>
+                    <tr>
+                        <th scope="col">Delivery</th>
+                        <th scope="col">Express</th>
+                        <th scope="col">Standard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Time</th>
+                        <td>1 Working Day</td>
+                        <td>7 - 14 Working Days</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Price</th>
+                        <td id ="ExpressDeliveryPrice" >$100</td>
+                        <td id ="StandardDeliveryPrice">$50</td>
+                    </tr>
+                </tbody>
+            </table>
+        <div class="ship-para">
+            <p> No hassle free delivery. Choose between express or standard delivery on checkout and rest assured your goods will arrive safely and on time.</p>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="task.js"></script>
+</body>
+
+</html>

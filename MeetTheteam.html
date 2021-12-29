@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!--CSS file-->
+    <link rel="stylesheet" href="MyStyle.css">
+    <!--bootstrap file-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--jQuery file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+    <!--javascript file-->
+    <script type="text/javascript" src="task.js"></script>
+
+    <style>
+        body {
+            margin: auto;
+            background: url(https://latestmobile24.com/wp-content/uploads/2020/11/Samsung-Galaxy-Oxygen-Pro.jpg) no-repeat fixed center center;
+            background-size: cover;
+        }
+
+        .CnterText {
+            text-align: center;
+            font-weight: bolder;
+            margin-top: 2%;
+        }
+
+        .RoundImg {
+            width: 90%;
+            height: 80%;
+            border-radius: 90%;
+
+        }
+
+        .RoundImgManager {
+            width: 75%;
+            height: 70%;
+            border-radius: 90%;
+        }
+
+        .Style-li-Team {
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-family: Tahoma;
+        }
+
+        th,
+        td {
+            border: 2px solid;
+        }
+
+        .tbStyle {
+            margin-top: 30%;
+        }
+
+        .tbStyle:hover {
+            background-color: blue;
+            color: white;
+            font-size: x-large;
+        }
+
+        .OverMangerTb:hover {
+            font-size: larger;
+            color: white;
+            background-color: green;
+        }
+
+        /*********************************************************************************/
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            background: #e3e3e3;
+            position: relative;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul li a {
+            color: #292929;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+
+        ul li:hover {
+            background: lightgrey;
+        }
+
+        ul ul {
+            position: absolute;
+            min-width: 200px;
+            background: lightgrey;
+            display: none;
+        }
+
+        ul ul li {
+            display: block;
+            background: #e3e3e3;
+        }
+
+        ul li:hover ul {
+            display: block;
+        }
+
+        ul li i {
+            color: #292929;
+            float: right;
+            padding-left: 20px;
+        }
+
+        nav div {
+            background: lightgrey;
+            color: #292929;
+            font-size: 24px;
+            padding: 0.6em;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media(max-width: 768px) {
+            nav div {
+                display: block;
+            }
+
+            ul {
+                display: none;
+                position: static;
+                background: #e3e3e3;
+            }
+
+            ul li {
+                display: block;
+            }
+
+            ul ul {
+                position: static;
+                background: #e3e3e3;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--*************************************************************************************************-->
+    <nav>
+       <!--<div>
+            <i class="fa fa-bars"></i>
+        </div>
+        --> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About us <i class="fa fa-sort-desc"></i></a>
+                <ul>
+                    <li><a href="#">About us 1</a></li>
+                    <li><a href="#">About us 2</a></li>
+                </ul>
+            </li>
+            <li><a href="shipping.html">Shipping <i class="fa fa-sort-desc"></i></a>
+                <ul>
+                    <li><a href="#">Shipping 1</a></li>
+                    <li><a href="#">Shipping 2</a></li>
+                </ul>
+            </li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+    </nav>
+    <!--*********************************************************************************************-->
+
+
+    <div>
+        <h1 class="CnterText">Our Team </h1>
+        <p class="CnterText">Our team is being presented according to different department</p>
+    </div>
+    <div class="container">
+        <ol>
+            <li class="Style-li-Team">technician</li>
+            <div class="row mt-3">
+
+                <div class="col">
+                    <img src="https://images.unsplash.com/photo-1546672657-366775449156?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGFmcmljYW4lMjBtYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+                        alt="" class="RoundImg">
+                </div>
+                <div class="col">
+                    <img src="https://bloximages.chicago2.vip.townnews.com/stlamerican.com/content/tncms/assets/v3/editorial/1/cb/1cb65068-c76d-11e8-8686-7f40e5fbe1d0/5bb5605309dba.image.jpg?resize=400%2C422"
+                        alt="" class="RoundImg">
+                </div>
+                <div class="col">
+                    <img src="https://static.boredpanda.com/blog/wp-content/uploads/2018/10/woman-confronts-man-entering-his-building13.jpg"
+                        alt="" class="RoundImg">
+                </div>
+                <div class="col">
+                    <img src="https://previews.123rf.com/images/warrengoldswain/warrengoldswain1610/warrengoldswain161000081/65425247-portrait-of-real-black-african-man-with-no-expression-id-or-passport-photo-full-collection-of-divers.jpg"
+                        alt="" class="RoundImg">
+                </div>
+            </div>
+
+            <li class="Style-li-Team" style="margin-top: 15%;">Manager</li>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <img src="https://previews.123rf.com/images/warrengoldswain/warrengoldswain1610/warrengoldswain161000211/65431553-portrait-of-real-black-african-man-with-no-expression-id-or-passport-photo-full-collection-of-divers.jpg"
+                        alt="" class="RoundImgManager">
+                </div>
+
+                <div class="col">
+                    <div class="tbStyle">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Office</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dave</td>
+                                    <td>You can find Dave at office A.205 Building Rosaint Belgard.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <li class="Style-li-Team">CEO</li>
+                <div class="row mt-5">
+                    <div class="col ">
+                        <img src="images/rose.jpeg" alt="" class="RoundImgManager">
+                    </div>
+
+                    <div class="col">
+                        <div style="margin-top: 50%;" class="OverMangerTb">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Office</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>Rose</td>
+                                        <td>You can find Rose at office A.001 Building Rosaint Belgard.</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </ol>
+    </div>
+
+    <!--section abt company--->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div>
+                        <div>
+                            <h3>PhoneCompany</h3>
+                        </div>
+                        <div>
+                            <p>
+                                Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo
+                                consequat duis
+                                sed aute irure.
+                            </p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    Phone +27 356 945234
+                                </li>
+                                <li>
+                                    Email contact@example.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 md-t3">
+                    <div>
+                        <div>
+                            <h3>The Company</h3>
+                        </div>
+                        <div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a class="li-section-footer" href="#">Site Map</a>
+                                    </li>
+                                    <li>
+                                        <a class="li-section-footer" href="#">Legal</a>
+                                    </li>
+                                    <li>
+                                        <a class="li-section-footer" href="#">Agent Admin</a>
+                                    </li>
+                                    <li>
+                                        <a class="li-section-footer" href="#">Careers</a>
+                                    </li>
+                                    <li>
+                                        <a class="li-section-footer" href="#">Affiliate</a>
+                                    </li>
+                                    <li>
+                                        <a class="li-section-footer" href="#">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 section-md-t3">
+                    <div>
+                        <div>
+                            <h3>International sites</h3>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <a class="li-section-footer" href="#">Venezuela</a>
+                                </li>
+                                <li>
+                                    <a class="li-section-footer" href="#">China</a>
+                                </li>
+                                <li>
+                                    <a class="li-section-footer" href="#">Hong Kong</a>
+                                </li>
+                                <li>
+                                    <a class="li-section-footer" href="#">Argentina</a>
+                                </li>
+                                <li>
+                                    <a class="li-section-footer" href="#">Singapore</a>
+                                </li>
+                                <li>
+                                    <a class="li-section-footer" href="#">Philippines</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--end of section abt company-->
+
+
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <p class="footer-p"> Designed by <a href="#">GlodyLushombo</a></p>
+            </div>
+
+        </div>
+    </footer>
+    <!-- End  Footer -->
+
+    <script type="text/javascript" src="task.js"></script>
+</body>
+
+</html>
